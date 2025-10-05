@@ -33,8 +33,7 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 # Install dependencies
 pip install -r requirements.txt
-'''
-
+```
 
 ### 2. Download Dataset
 
@@ -42,8 +41,7 @@ pip install -r requirements.txt
 # Download ALS dataset from provided URL
 wget "https://s3.eu-west-2.amazonaws.com/helical-candidate-datasets/counts_combined_filtered_BA4_sALS_PN.h5ad?..." \
   -O data/raw/counts_combined_filtered_BA4_sALS_PN.h5ad
-
-'''
+```
 
 ### 3. Dataset Details:
 
@@ -60,7 +58,7 @@ jupyter notebook notebooks/task1_perturbation_workflow.ipynb
 jupyter notebook notebooks/task2_als_geneformer.ipynb
 jupyter notebook notebooks/task3_embedding_analysis.ipynb
 jupyter notebook notebooks/task4_target_prioritization.ipynb
-'''
+```
 
 ---
 
@@ -105,11 +103,12 @@ embedding:
   model_name: "ctheodoris/Geneformer"
   batch_size: 10
   max_input_size: 2048
-
+```
 ---
 
 ## Output Structure 
 
+```bash
 results/
 ├── task1/                          # Perturbation generation
 │   ├── tables/
@@ -147,7 +146,7 @@ results/
         ├── decision_matrix.png           # Multi-criteria heatmap
         └── coverage_analysis.png         # Cell-level effects
 
-
+```
 ---
 
 ## Pipeline Overview
