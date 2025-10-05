@@ -1,0 +1,101 @@
+# ============================================================================
+# config/config.yaml - Complete Configuration
+# ============================================================================
+# Gene Perturbation Analysis Configuration
+# All settings for the complete pipeline
+
+# Data paths
+data:
+  raw_data_path: "data/counts_combined_filtered_BA4_sALS_PN.h5ad"
+  cache_dir: "cache"
+  results_dir: "results"
+  smoke_test_subset: "cache/smoke_test_subset.h5ad"
+
+# Smoke testing (for fast iteration)
+smoke_test:
+  enabled: true              # Set to false for full pipeline
+  n_cells: 200               # Number of cells in smoke test
+  n_genes: 100              # Number of genes in smoke test
+  save_subset: true         # Save subset for reuse
+  verbose: false            # Detailed smoke test output
+
+# Random seed for reproducibility
+random_seed: 0
+
+# ALS genes to analyze (known disease-associated genes)
+als_genes:
+  - SOD1        # Superoxide dismutase 1
+  - C9orf72     # C9orf72-SMCR8 complex subunit
+  - TARDBP      # TAR DNA-binding protein (TDP-43)
+  - FUS         # FUS RNA binding protein
+  - TBK1        # TANK binding kinase 1
+
+# Perturbation settings (multiplicative only, clean approach)
+perturbation:
+  method: 'multiplicative'   # Only method supported
+  
+  knock_down:
+    factors: [0.2, 0.5] # Keep 20%, 50% (i.e., 20%, 50%)
+  
+  knock_up:
+    factors: [2.0, 3.0] # 2x, 3x amplification
+    noise_level: 0.1         # 10% biological variability
+    min_expr: 0.1            # Minimum expression to amplify (avoid zeros)
+  
+  cell_specific: true
+  condition_column: 'Condition'
+  condition_values:
+    disease: 'ALS'
+    control: 'PN'
+
+# GeneFormer V2 settings (gf-12L-95M-i4096)
+geneformer:
+  model_name: "gf-12L-95M-i4096"
+  embedding_dim: 256
+  emb_layer: -1              # Final layer
+  batch_size: 50             # Cells per batch
+  use_gpu: false             # CPU only
+
+# Embedding analysis
+embedding_analysis:
+  k_neighbors: 10            # For neighborhood preservation
+  distance_metric: "euclidean"
+  n_pca_components: 10       # For distribution testing
+
+# Visualization
+visualization:
+  figure_dpi: 150
+  figure_format: "png"
+  figsize_default: [10, 6]
+  figsize_wide: [14, 6]
+  color_palette: "Set2"
+  save_plots: true
+  plot_types:
+    - perturbation_effect    # Before/after comparison
+    - log2fc_summary        # Fold-change bar plot
+    - embedding_shift       # UMAP/PCA shift
+    - shift_vectors         # Arrow plots
+    - metric_comparison     # Cross-perturbation comparison
+
+# Therapeutic target scoring
+therapeutic_scoring:
+  min_shift_threshold: 0.1
+  specificity_weight: 1.0
+  efficacy_weight: 2.0
+  safety_weight: 0.5
+  top_n_targets: 5           # Number of top targets to report
+
+# Validation thresholds
+validation:
+  fold_change_tolerance: 0.2  # 20% deviation acceptable
+  min_cells_affected: 10      # Minimum cells that should change
+  correlation_threshold: 0.8  # Min correlation for plausibility
+
+# Output settings
+output:
+  save_individual_h5ad: false  # Don't save individual perturbation files
+  save_embeddings_format: "hdf5"
+  compression: "gzip"
+  save_metadata: true
+  save_plots: true
+  organize_by_type: true  # Organize outputs into subdirectories
