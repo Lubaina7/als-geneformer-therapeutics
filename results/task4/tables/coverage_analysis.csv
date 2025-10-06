@@ -1,0 +1,13 @@
+perturbation_id,gene,type,factor,pct_cells_improved
+KD_MAP1B_0.2_ALS,MAP1B,knock_down,0.2,26.0
+KD_MAP1B_0.5_ALS,MAP1B,knock_down,0.5,26.0
+KD_KHDRBS2_0.2_ALS,KHDRBS2,knock_down,0.2,18.0
+KD_KHDRBS2_0.5_ALS,KHDRBS2,knock_down,0.5,18.0
+KD_DMD_0.2_ALS,DMD,knock_down,0.2,22.0
+KD_DMD_0.5_ALS,DMD,knock_down,0.5,28.000000000000004
+KU_MAP1B_2.0_ALS,MAP1B,knock_up,2.0,22.0
+KU_MAP1B_3.0_ALS,MAP1B,knock_up,3.0,22.0
+KU_KHDRBS2_2.0_ALS,KHDRBS2,knock_up,2.0,14.000000000000002
+KU_KHDRBS2_3.0_ALS,KHDRBS2,knock_up,3.0,10.0
+KU_DMD_2.0_ALS,DMD,knock_up,2.0,26.0
+KU_DMD_3.0_ALS,DMD,knock_up,3.0,24.0

@@ -1,0 +1,3 @@
+perturbation_id,gene,expected_log2fc,actual_log2fc,fc_match,plausibility_pass,failed_checks,is_condition_specific,condition,n_cells_perturbed
+DEMO_KD_MAP1B_ALS,MAP1B,-1.0,-0.5277113249344471,False,False,maintains_sparsity,True,ALS,26
+DEMO_KD_MAP1B_PN,MAP1B,-1.0,-0.3441972587441794,False,False,maintains_sparsity,True,PN,12

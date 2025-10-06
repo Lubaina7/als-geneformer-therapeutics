@@ -1,0 +1,45 @@
+======================================================================
+TASK 2: ALS PERTURBATIONS + GENEFORMER EMBEDDINGS
+======================================================================
+
+Objective: Apply workflow to ALS genes and generate embeddings
+
+Dataset:
+  Total cells: 50
+  ALS cells: 32
+  PN cells: 18
+
+ALS Genes:
+  Targeted: 3
+  List: MAP1B, KHDRBS2, DMD
+
+Perturbations:
+  Total: 24
+  Knock-downs: 12
+  Knock-ups: 12
+  ALS-targeted: 12
+  PN-targeted: 12
+
+GeneFormer V2:
+  Model: ./geneformer_cache/models--ctheodoris--Geneformer/snapshots/628247599bf5f5aa2de011b9fd982e137059ef52/gf-12L-95M-i4096
+  Embedding dimension: 512
+  Total embedding sets: 27
+
+Reference States:
+  ALS baseline: (32, 512)
+  PN baseline: (18, 512)
+  Disease distance (ALS ↔ PN): 0.102
+
+Embedding Shifts (Quick Summary):
+  Mean: 0.023
+  Max: 0.055
+  Min: 0.007
+
+Top 5 Perturbations by Centroid Shift:
+  1. KD_DMD_0.2_ALS: 0.055
+  2. KD_MAP1B_0.2_ALS: 0.042
+  3. KD_DMD_0.2_PN: 0.041
+  4. KD_DMD_0.5_PN: 0.034
+  5. KD_MAP1B_0.2_PN: 0.034
+
+Status: Ready for Task 3 interpretation

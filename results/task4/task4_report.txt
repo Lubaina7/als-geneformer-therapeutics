@@ -1,0 +1,58 @@
+======================================================================
+TASK 4: THERAPEUTIC TARGET PRIORITIZATION
+======================================================================
+
+Methodology:
+  Optimization approach:
+    - Test multiple perturbation factors per gene
+    - Knockdown factors: [0.2, 0.5]
+    - Knockup factors: [2.0, 3.0]
+    - Select optimal factor based on composite score
+
+  Composite score weights:
+    - Rescue potential (40%): Movement toward healthy state
+    - Coverage (30%): % cells that improve
+    - Effect size (15%): Sufficient strength (3-8 optimal)
+    - Preservation (15%): Maintains cell identity
+
+Results:
+  Genes evaluated: 3
+  Disease-rescuing: 2
+  Mean coverage: 24.0%
+  Mean rescue score: -0.001
+
+Optimal factor distribution:
+  0.5x: 3 genes
+
+======================================================================
+TOP 10 THERAPEUTIC TARGETS
+======================================================================
+
+ 1. DMD (knock_down @ 0.5x)
+    Composite: 0.213
+    Rescue: 0.000 | Coverage: 28.0%
+    Effect: 0.02 | Preservation: 0.854
+    Tested: 4 factors
+    Rationale: Upregulation by 0.5x: minimal rescue effect, limited coverage (28%), excellent cell identity preservation.
+
+ 2. MAP1B (knock_down @ 0.5x)
+    Composite: 0.207
+    Rescue: -0.000 | Coverage: 26.0%
+    Effect: 0.03 | Preservation: 0.854
+    Tested: 4 factors
+    Rationale: Upregulation by 0.5x: minimal rescue effect, limited coverage (26%), excellent cell identity preservation.
+
+ 3. KHDRBS2 (knock_down @ 0.5x)
+    Composite: 0.190
+    Rescue: -0.003 | Coverage: 18.0%
+    Effect: 0.01 | Preservation: 0.900
+    Tested: 4 factors
+    Rationale: Upregulation by 0.5x: minimal rescue effect, limited coverage (18%), excellent cell identity preservation.
+
+
+Recommendations:
+  1. Validate top candidates in experimental models
+  2. Test optimal factors in dose-response studies
+  3. Assess combination therapies with multiple targets
+  4. Investigate mechanisms of top rescue candidates
+  5. Monitor for off-target effects at optimal factors

@@ -1,0 +1,6 @@
+gene,mean_rank_shift,median_rank_shift,mean_abs_rank_shift,pct_cells_changed_rank,is_effective_for_geneformer,warning
+DMD,13.12,0.5,13.12,50.0,False,"Low rank shift (13 positions) - perturbation may be invisible to GeneFormer. Consider stronger factors (10x up, 0.1x down) or percentile-based."
+DMD,8.08,0.0,8.08,46.0,False,"Low rank shift (8 positions) - perturbation may be invisible to GeneFormer. Consider stronger factors (10x up, 0.1x down) or percentile-based."
+DMD,6.02,0.0,6.02,30.0,False,"Low rank shift (6 positions) - perturbation may be invisible to GeneFormer. Consider stronger factors (10x up, 0.1x down) or percentile-based."
+MAP1B,3.76,0.0,3.76,24.0,False,"Low rank shift (4 positions) - perturbation may be invisible to GeneFormer. Consider stronger factors (10x up, 0.1x down) or percentile-based."
+DMD,-9.08,0.0,9.08,32.0,False,"Low rank shift (9 positions) - perturbation may be invisible to GeneFormer. Consider stronger factors (10x up, 0.1x down) or percentile-based."

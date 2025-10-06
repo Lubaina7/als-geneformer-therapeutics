@@ -1,0 +1,15 @@
+perturbation_id,gene,expected_log2fc,actual_log2fc,fc_match,plausibility_pass,failed_checks,is_condition_specific,condition,n_cells_perturbed
+DEMO_KD_MAP1B_0.2,MAP1B,-2.321928094887362,-2.550648136211606,False,False,maintains_sparsity,False,,38
+DEMO_KD_MAP1B_0.5,MAP1B,-1.0,-1.0546906415491946,True,False,maintains_sparsity,False,,38
+DEMO_KD_KHDRBS2_0.2,KHDRBS2,-2.321928094887362,-2.520571913466167,True,False,maintains_sparsity,False,,32
+DEMO_KD_KHDRBS2_0.5,KHDRBS2,-1.0,-1.0549083411173554,True,False,maintains_sparsity,False,,32
+DEMO_KD_DMD_0.2,DMD,-2.321928094887362,-2.52292822223965,False,False,maintains_sparsity,False,,41
+DEMO_KD_DMD_0.5,DMD,-1.0,-1.0595277013994069,True,False,maintains_sparsity,False,,41
+DEMO_KU_MAP1B_2.0,MAP1B,1.0,1.0015775780975509,True,False,maintains_sparsity,False,,36
+DEMO_KU_MAP1B_3.0,MAP1B,1.584962500721156,1.5954472491841967,True,False,maintains_sparsity,False,,38
+DEMO_KU_KHDRBS2_2.0,KHDRBS2,1.0,1.0514515315474908,True,False,maintains_sparsity,False,,28
+DEMO_KU_KHDRBS2_3.0,KHDRBS2,1.584962500721156,1.6445743653528966,True,False,maintains_sparsity,False,,32
+DEMO_KU_DMD_2.0,DMD,1.0,0.991098371670561,True,False,maintains_sparsity,False,,41
+DEMO_KU_DMD_3.0,DMD,1.584962500721156,1.5832711815922755,True,False,maintains_sparsity,False,,41
+DEMO_KD_MAP1B_ALS,MAP1B,-1.0,-0.5277113249344471,False,False,maintains_sparsity,True,ALS,26
+DEMO_KD_MAP1B_PN,MAP1B,-1.0,-0.3441972587441794,False,False,maintains_sparsity,True,PN,12

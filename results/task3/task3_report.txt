@@ -1,0 +1,100 @@
+======================================================================
+TASK 3: EMBEDDING SPACE INTERPRETATION
+======================================================================
+
+Dataset:
+  Embedding dimension: 512
+  Cells: 50
+  Perturbations: 24
+  ALS perturbations: 12
+
+Methods Comparison:
+  Pearson correlation (Euclidean vs Cosine): 0.971
+  Mean rank difference: 0.6
+
+Statistical Testing:
+  Tests: 10
+  Significant (p<0.05): 0/10
+
+Top 5 by Centroid Shift (Euclidean):
+
+1. KD_DMD_0.2_ALS
+   Gene: DMD (knock_down)
+   Centroid shift: 0.055
+   Cosine shift: 0.002
+
+2. KD_MAP1B_0.2_ALS
+   Gene: MAP1B (knock_down)
+   Centroid shift: 0.042
+   Cosine shift: 0.002
+
+3. KD_DMD_0.2_PN
+   Gene: DMD (knock_down)
+   Centroid shift: 0.041
+   Cosine shift: 0.001
+
+4. KD_DMD_0.5_PN
+   Gene: DMD (knock_down)
+   Centroid shift: 0.034
+   Cosine shift: 0.001
+
+5. KD_MAP1B_0.2_PN
+   Gene: MAP1B (knock_down)
+   Centroid shift: 0.034
+   Cosine shift: 0.001
+
+
+Top 5 by Cosine Shift:
+
+1. KD_DMD_0.2_ALS
+   Gene: DMD (knock_down)
+   Centroid shift: 0.055
+   Cosine shift: 0.002
+
+2. KD_MAP1B_0.2_ALS
+   Gene: MAP1B (knock_down)
+   Centroid shift: 0.042
+   Cosine shift: 0.002
+
+3. KD_DMD_0.2_PN
+   Gene: DMD (knock_down)
+   Centroid shift: 0.041
+   Cosine shift: 0.001
+
+4. KD_DMD_0.5_PN
+   Gene: DMD (knock_down)
+   Centroid shift: 0.034
+   Cosine shift: 0.001
+
+5. KD_MAP1B_0.2_PN
+   Gene: MAP1B (knock_down)
+   Centroid shift: 0.034
+   Cosine shift: 0.001
+
+
+Top 5 Disease Rescue Candidates (Euclidean):
+
+1. KD_KHDRBS2_0.5_ALS
+   Gene: KHDRBS2 (knock_down)
+   Rescue score (Euclidean): -0.003
+   Rescue score (Cosine): -0.000
+
+2. KD_MAP1B_0.5_ALS
+   Gene: MAP1B (knock_down)
+   Rescue score (Euclidean): -0.000
+   Rescue score (Cosine): 0.000
+
+3. KD_DMD_0.5_ALS
+   Gene: DMD (knock_down)
+   Rescue score (Euclidean): 0.000
+   Rescue score (Cosine): 0.000
+
+4. KU_KHDRBS2_2.0_ALS
+   Gene: KHDRBS2 (knock_up)
+   Rescue score (Euclidean): 0.000
+   Rescue score (Cosine): 0.000
+
+5. KU_KHDRBS2_3.0_ALS
+   Gene: KHDRBS2 (knock_up)
+   Rescue score (Euclidean): 0.002
+   Rescue score (Cosine): 0.000
