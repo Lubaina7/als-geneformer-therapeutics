@@ -32,8 +32,7 @@ data/cache/
 *.hdf5
 *.hdf
 
-# Results (optional — if you don’t want to track outputs)
-results/
+# Results (optional — if you don’t want to track output
 
 # Embeddings (optional)
 **/embeddings/
